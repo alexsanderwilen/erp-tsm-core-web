@@ -31,7 +31,7 @@ var
   BtnEntrar: TJSHTMLElement;
   EdtSenha: TJSHTMLElement;
 begin
-  BtnEntrar := document.getElementById('btnEntrar');
+  BtnEntrar := TJSHTMLElement(document.getElementById('btnEntrar'));
   if Assigned(BtnEntrar) then
     BtnEntrar.addEventListener('click',
       procedure(Event: TJSEvent)
@@ -40,7 +40,7 @@ begin
       end
     );
 
-  EdtSenha := document.getElementById('edtSenha');
+  EdtSenha := TJSHTMLElement(document.getElementById('edtSenha'));
   if Assigned(EdtSenha) then
     EdtSenha.addEventListener('keydown',
       procedure(Event: TJSEvent)
